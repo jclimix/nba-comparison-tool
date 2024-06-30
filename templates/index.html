@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Comparison</title>
+</head>
+<body>
+    <h1>NBA Player Comparison</h1>
+    <form action="/compare" method="post">
+        <label for="player_id_A">Player 1 ID:</label>
+        <input type="text" id="player_id_A" name="player_id_A" required>
+        <br>
+        <label for="season_A">Season for Player 1:</label>
+        <input type="text" id="season_A" name="season_A" required>
+        <br>
+        <label for="player_id_B">Player 2 ID:</label>
+        <input type="text" id="player_id_B" name="player_id_B" required>
+        <br>
+        <label for="season_B">Season for Player 2:</label>
+        <input type="text" id="season_B" name="season_B" required>
+        <br>
+        <input type="submit" value="Compare">
+    </form>
+</body>
+</html>
