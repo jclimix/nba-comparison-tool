@@ -123,7 +123,7 @@ def compare():
 
     table = tabulate(results_df, headers='keys', tablefmt='html', floatfmt=".1f")
 
-    return render_template('compare.html', player_name_A=player_name_A, player_name_B=player_name_B, table=table)
+    return render_template('compare.html', season_A=season_A, season_B=season_B, player_name_A=player_name_A, player_name_B=player_name_B, table=table)
 
 if __name__ == "__main__":
     serve(app, host="0.0.0.0", port=8000)

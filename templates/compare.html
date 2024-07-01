@@ -3,15 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparison Results</title>
+    <title>NBA Comparison Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Medium&family=Antonio&family=Kenia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', sans-serif;
+            background-image: url('https://i.ibb.co/vjn3zVv/FO-V-kag-AEE65p-upscaled.jpg');
+            background-size: cover;
+            background-color: black;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: #cff8b4;
+            font-size: 70px;
+            text-align: center;
+            line-height: 0.6;
+            font-family: 'Antonio', sans-serif;
+            text-shadow: -2px -2px 0 #000000,
+            2px -2px 0 #000000,
+            -2px 2px 0 #000000,
+            2px 2px 0 #000000;
+            margin: 50px 0;
+        }
+        
+        h2 {
+            color: #1d1d1d;
+            font-size: 90px;
+            text-align: center;
+            font-family: 'Kenia', sans-serif;
+            line-height: 0.2;
+            text-shadow: -1px -1px 0 #f7f7f7,
+            1px -1px 0 #f7f7f7,
+            -1px 1px 0 #f7f7f7,
+            1px 1px 0 #f7f7f7;
+            margin: 20px 0;
+        }
+
+        h3 {
+            color: #ffffff;
+            font-size: 75px;
+            text-align: center;
+            font-family: 'Tilt Warp', sans-serif;
+            line-height: 0.9;
+            text-shadow: -3px -3px 0 #000000,
+            3px -3px 0 #000000,
+            -3px 3px 0 #000000,
+            3px 3px 0 #000000;
+            margin: 20px 0;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Align items vertically */
+            height: 100vh; /* Center vertically */
+        }
+
+        #capture, #copyButton {
+            font-size: 27px;
+            font-family: 'Antonio', sans-serif;
+            background-color: #060606; /* Button background color */
+            color: #fff; /* Text color */
+            border: 3px solid #f5f5f5;
+            padding: 10px 25px;
+            cursor: pointer;
+            border-radius: 15px; /* Rounded corners */
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        #capture:hover, #copyButton:hover {
+            background-color: #0056b3; /* Hover color */
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            width: 33.33%;
+        }
+        
+        th {
+            background-color: #333;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
-    <h1>Comparison Results</h1>
-    <h2>{{ player_name_A }} vs. {{ player_name_B }}</h2>
-    <div>
-        {{ table | safe }}
+    <h1>NBA Comparison Results</h1>
+    <h3>{{ player_name_A }} ({{ season_A }})</h3>
+    <h2><br> vs. <br><br></h2>
+    <h3>{{ player_name_B }} ({{ season_B }})</h3>
+    <div class="center">
+        <table class="custom-table">
+            {{ table | safe }}
+        </table>
+        <a href="/" id="capture">Go Back</a>
     </div>
-    <br>
-    <a href="/">Go back</a>
 </body>
 </html>
