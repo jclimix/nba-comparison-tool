@@ -121,6 +121,9 @@ def compare():
     # Generate HTML table
     table = tabulate(results_df, headers='keys', tablefmt='html', floatfmt=".1f")
 
+    player_age_A = int(player_age_A)
+    player_age_B = int(player_age_B)
+
     return render_template('compare.html', season_A=season_A, season_B=season_B, player_name_A=player_name_A, player_name_B=player_name_B, player_age_A=player_age_A, player_age_B=player_age_B, table=table)
 
 
