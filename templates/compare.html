@@ -57,6 +57,14 @@
             margin: 20px 0;
         }
 
+        p {
+            color: #ffffff;
+            font-size: 50px;
+            text-align: center;
+            font-family: 'Antonio', sans-serif;
+            margin: 10px 0;
+        }
+
         .center {
             display: flex;
             justify-content: center;
@@ -124,8 +132,10 @@
 <body>
     <h1>NBA Comparison Results</h1>
     <h3>{{ player_name_A }} ({{ season_A }})</h3>
+    <p>Age: {{ player_age_A }}</p>
     <h2><br> vs. <br><br></h2>
     <h3>{{ player_name_B }} ({{ season_B }})</h3>
+    <p>Age: {{ player_age_B }}</p>
     <div class="center">
         <table class="custom-table">
             <thead>
