@@ -5,6 +5,7 @@ from scipy.stats import percentileofscore
 from tabulate import tabulate
 from waitress import serve
 
+
 app = Flask(__name__)
 
 def season_player_info(season, player_id):
