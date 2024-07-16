@@ -79,7 +79,7 @@ def compare():
                                    f"{round(base_stats_A['FG3_PCT'], 3)}", f"{round(base_stats_A['FT_PCT'], 3)}", 
                                    round(adv_stats_A['NET_RATING'], 1), f"{round(adv_stats_A['EFG_PCT'], 3)}",
                                    f"{round(adv_stats_A['TS_PCT'], 3)}", round(adv_stats_A['PIE'], 3)],
-        f'P1-Percentile ({season_A})': [round(percentiles_A['PTS'], 1), round(percentiles_A['AST'], 1), round(percentiles_A['REB'], 1),
+        f'P1-Rank ({season_A})': [round(percentiles_A['PTS'], 1), round(percentiles_A['AST'], 1), round(percentiles_A['REB'], 1),
                                         round(percentiles_A['STL'], 1), round(percentiles_A['BLK'], 1), f"{round(percentiles_A['FG_PCT'], 1)}",
                                         f"{round(percentiles_A['FG3_PCT'], 1)}", f"{round(percentiles_A['FT_PCT'], 1)}",
                                         round(percentiles_A['NET_RATING'], 1), f"{round(percentiles_A['EFG_PCT'], 1)}",
@@ -89,12 +89,12 @@ def compare():
                                    f"{round(base_stats_B['FG3_PCT'], 3)}", f"{round(base_stats_B['FT_PCT'], 3)}", 
                                    round(adv_stats_B['NET_RATING'], 1), f"{round(adv_stats_B['EFG_PCT'], 3)}",
                                    f"{round(adv_stats_B['TS_PCT'], 3)}", round(adv_stats_B['PIE'], 3)],
-        f'P2-Percentile ({season_B})': [round(percentiles_B['PTS'], 1), round(percentiles_B['AST'], 1), round(percentiles_B['REB'], 1),
+        f'P2-Rank ({season_B})': [round(percentiles_B['PTS'], 1), round(percentiles_B['AST'], 1), round(percentiles_B['REB'], 1),
                                         round(percentiles_B['STL'], 1), round(percentiles_B['BLK'], 1), f"{round(percentiles_B['FG_PCT'], 1)}",
                                         f"{round(percentiles_B['FG3_PCT'], 1)}", f"{round(percentiles_B['FT_PCT'], 1)}",
                                         round(percentiles_B['NET_RATING'], 1), f"{round(percentiles_B['EFG_PCT'], 1)}",
                                         f"{round(percentiles_B['TS_PCT'], 1)}", round(percentiles_B['PIE'], 1)],
-        'Diff (Percentile)': [round(percentiles_B['PTS'] - percentiles_A['PTS'], 2),
+        'Diff (OVR)': [round(percentiles_B['PTS'] - percentiles_A['PTS'], 2),
                               round(percentiles_B['AST'] - percentiles_A['AST'], 2),
                               round(percentiles_B['REB'] - percentiles_A['REB'], 2),
                               round(percentiles_B['STL'] - percentiles_A['STL'], 2),
@@ -110,10 +110,10 @@ def compare():
 
     # Add overall score to the results data
     results_data[f'P1-Stats ({season_A})'].append('')
-    results_data[f'P1-Percentile ({season_A})'].append(round(overall_score_A + 5, 1))
+    results_data[f'P1-Rank ({season_A})'].append(round(overall_score_A + 5, 1))
     results_data[f'P2-Stats ({season_B})'].append('')
-    results_data[f'P2-Percentile ({season_B})'].append(round(overall_score_B + 5, 1))
-    results_data['Diff (Percentile)'].append(round(overall_score_B - overall_score_A, 1))
+    results_data[f'P2-Rank ({season_B})'].append(round(overall_score_B + 5, 1))
+    results_data['Diff (OVR)'].append(round(overall_score_B - overall_score_A, 1))
 
     # Create DataFrame with index
     index_labels = ['PTS', 'AST', 'REB', 'STL', 'BLK', 'FG_PCT', 'FG3_PCT', 'FT_PCT', 'NET_RATING', 'EFG_PCT', 'TS_PCT', 'PIE', 'OVR']
