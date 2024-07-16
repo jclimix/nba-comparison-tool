@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -203,13 +202,13 @@
     </style>
 </head>
 
-<body>
-    <h1>NBA Comparison Results</h1>
-    <h3>{{ player_name_A }} ({{ season_A }})</h3>
-    <p>{{ player_age_A }} years old</p>
+<body cz-shortcut-listen="true">
+    <h1>NBA Comparison<br><br>Results</h1>
+    <h3>Amar'e Stoudemire (2014-15)</h3>
+    <p>32 years old</p>
     <h2><br> vs. <br><br></h2>
-    <h3>{{ player_name_B }} ({{ season_B }})</h3>
-    <p>{{ player_age_B }} years old</p>
+    <h3>Andre Ingram (2018-19)</h3>
+    <p>33 years old</p>
     <div class="center">
         <table class="custom-table">
             <thead>
@@ -220,11 +219,131 @@
                 </tr>
             </thead>
             <tbody>
-                {{ table | safe }}
             </tbody>
         </table>
+        <table>
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th>P1-Stats (2014-15) </th>
+                    <th style="text-align: right;"> P1-Rank (2014-15)</th>
+                    <th>P2-Stats (2018-19) </th>
+                    <th style="text-align: right;"> P2-Rank (2018-19)</th>
+                    <th style="text-align: right;"> Diff (OVR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PTS </td>
+                    <td>11.5 </td>
+                    <td style="text-align: right;"> 74.4</td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> -24.4</td>
+                </tr>
+                <tr>
+                    <td>AST </td>
+                    <td>0.8 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> 0.0</td>
+                </tr>
+                <tr>
+                    <td>REB </td>
+                    <td>5.6 </td>
+                    <td style="text-align: right;"> 82.4</td>
+                    <td>0.5 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> -32.4</td>
+                </tr>
+                <tr>
+                    <td>STL </td>
+                    <td>0.5 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td>0.3 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> 0.0</td>
+                </tr>
+                <tr>
+                    <td>BLK </td>
+                    <td>0.6 </td>
+                    <td style="text-align: right;"> 80.4</td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> -30.4</td>
+                </tr>
+                <tr>
+                    <td>FG_PCT </td>
+                    <td>0.557 </td>
+                    <td style="text-align: right;"> 93.9</td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> -43.9</td>
+                </tr>
+                <tr>
+                    <td>FG3_PCT </td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> 0.0</td>
+                </tr>
+                <tr>
+                    <td>FT_PCT </td>
+                    <td>0.72 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> 0.0</td>
+                </tr>
+                <tr>
+                    <td>NET_RATING</td>
+                    <td>-2.5 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td>9.6 </td>
+                    <td style="text-align: right;"> 94.1</td>
+                    <td style="text-align: right;"> 44.1</td>
+                </tr>
+                <tr>
+                    <td>EFG_PCT </td>
+                    <td>0.557 </td>
+                    <td style="text-align: right;"> 89.5</td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> -39.5</td>
+                </tr>
+                <tr>
+                    <td>TS_PCT </td>
+                    <td>0.595 </td>
+                    <td style="text-align: right;"> 91.4</td>
+                    <td>0.0 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> -41.4</td>
+                </tr>
+                <tr>
+                    <td>PIE </td>
+                    <td>0.131 </td>
+                    <td style="text-align: right;"> 90.4</td>
+                    <td>-0.093 </td>
+                    <td style="text-align: right;"> 50.0</td>
+                    <td style="text-align: right;"> -40.4</td>
+                </tr>
+                <tr>
+                    <td>OVR </td>
+                    <td> </td>
+                    <td style="text-align: right;"> 76.3</td>
+                    <td> </td>
+                    <td style="text-align: right;"> 59.4</td>
+                    <td style="text-align: right;"> -16.9</td>
+                </tr>
+            </tbody>
+        </table>
+
+
         <a href="/" id="capture">Go Back</a>
     </div>
+
 </body>
 
 </html>
