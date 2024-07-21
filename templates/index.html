@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://i.ibb.co/yXcbqyv/favicon-16x16.png" type="image/png">
-    <title>NBA Player Comparison Tool</title>
+    <title>NBA Player Comparison Tool | Universe-J</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Rowdies:wght@300;400;700&family=Rubik:wght@300;400;500;700&display=swap"
         rel="stylesheet">
@@ -127,10 +127,35 @@
             font-family: 'Rubik', sans-serif;
             /* Rubik font */
         }
+
+
+
+        .button-container {
+            text-align: center;
+        }
+
+        .doc-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: white;
+            background-color: black;
+            text-decoration: none;
+            border: 2.5px solid white;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .doc-button:hover {
+            background-color: white;
+            color: black;
+        }
     </style>
 </head>
 
 <body>
+    <p>.</p>
     <br><br>
     <br><br>
     <br><br>
@@ -143,6 +168,11 @@
     <h1>NBA</h1>
     <h2>COMPARISON</h2>
     <h3>Tool</h3>
+    <br><br>
+
+    <a href="https://docs.google.com/document/d/16hrBzSyx8WNGFv_mH0qxysIvhN7xaPfOtiz-K9otFLg/edit?usp=sharing"
+        class="doc-button" target="_blank">Quick Guide (G-Doc)</a>
+
     <form id="playerComparisonForm" action="/compare" method="post">
         <p>
             <b>Directions</b>: Choose a season, then choose a player from the dropdown.
@@ -198,14 +228,6 @@
     </form>
     <br><br>
     <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-
     <script>
         // Define player data for different seasons
         const playerData = {
@@ -7453,6 +7475,10 @@
         populatePlayers('A');
         populatePlayers('B');
     </script>
+    <p>.</p>
+
 </body>
+<br><br>
+<br><br>
 
 </html>
